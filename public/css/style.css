@@ -91,24 +91,29 @@ footer p {
 
 .weather {
   flex: 1;
+  margin-bottom: 20px;
 }
 
 .weather-data {
   width: 100%;
+  margin: auto;
   margin-top: 20px;
 }
 
-.weather-data ul,
-.weather-data p {
-  width: 300px;
+.weather-data ul {
+  padding: 0;
+  width: 500px;
   margin: auto;
   margin-top: 10px;
 }
 
 .weather-data p {
+  width: 300px;
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
+  margin: auto;
+  margin-top: 10px;
   color: grey;
 }
 
@@ -116,19 +121,23 @@ footer p {
   display: flex;
   align-items: center;
   padding: 10px 5px;
-  font-size: 1.5rem;
   color: grey;
   font-weight: bold;
 }
 
 .weather-data ul li strong {
+  display: inline-block;
+  font-size: 1.5rem;
   width: 140px;
 }
 
 .weather-data ul li span {
+  display: inline-block;
   margin-left: 10px;
   color: black;
+  width: calc(100% - 140px);
   font-size: 1.2rem;
+  padding-left: 10px;
 }
 
 .weather h5 {
@@ -138,12 +147,12 @@ footer p {
   margin-bottom: 20px;
   width: 190px;
   margin: auto;
-  height: 35px;
+  height: 38px;
 }
 
 .weather h5::before {
   content: "";
-  height: 3px;
+  height: 4px;
   width: 100px;
   background-color: grey;
   position: absolute;
@@ -178,9 +187,29 @@ footer p {
   font-size: 1.1rem;
 }
 
+@media (max-width: 565px) {
+  .weather-data {
+    width: 95%;
+  }
+
+  .weather-data ul {
+    width: 100%;
+  }
+}
+
 @media (max-width: 440px) {
   .form-group form input {
     width: 90%;
+  }
+
+  .weather-data ul li strong {
+    font-size: 1.3rem;
+    width: 120px;
+  }
+
+  .weather-data ul li span {
+    width: calc(100% - 120px);
+    font-size: 1.1rem;
   }
 }
 

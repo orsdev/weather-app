@@ -22,7 +22,7 @@ const getWeatherData = (e) => {
 
      html = `
       <ul>
-   <li><strong>Temperature</strong><span>${data.degree}</span></li>
+   <li><strong>Temperature</strong><span>${data.degree} degrees Celcius</span></li>
    <li><strong>Forecast</strong><span>${data.forecast}</span></li>
    <li><strong>Location</strong><span>${data.location}</span></li>
   </ul>`;
