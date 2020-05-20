@@ -1,12 +1,13 @@
 
 const formEventListener = () => {
- const form = document.querySelector('form');
- form.addEventListener('submit', getWeatherData);
+ const weatherForm = document.querySelector('form');
+ weatherForm.addEventListener('submit', getWeatherData);
 };
 
 const getWeatherData = (e) => {
  e.preventDefault();
  const input = document.querySelector('input');
+ const weatherDiv = document.querySelector('.weather-data');
 
  if (input.value) {
 
@@ -15,7 +16,6 @@ const getWeatherData = (e) => {
     return response.json();
    })
    .then(function (data) {
-    const weatherDiv = document.querySelector('.weather-data');
     let html;
 
     if (data.degree && data.forecast && data.location) {
@@ -39,7 +39,8 @@ const getWeatherData = (e) => {
     weatherDiv.innerHTML = html;
 
    }).catch(function (error) {
-    console.log('client fetch error', error)
+    let html = `<p>Something went wrong. Please try again.</p>`;
+    weatherDiv.innerHTML = html;
    })
 
  }
