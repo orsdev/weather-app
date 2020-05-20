@@ -1,9 +1,11 @@
 const fetch = require('cross-fetch');
 
+require('dotenv').config();
+
 const getWeatherReport = (location = 'Nigeria', callback) => {
 
- const apiKey = '439f18174885511ec718789ffeefeafd';
- const url = `http://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(location)}&appid=${apiKey}`;
+ const apiKey = process.env.WEATHER_KEY;
+ const url = `${process.env.WEATHER_API}/?q=${encodeURIComponent(location)}&appid=${apiKey}`;
 
  fetch(url)
   .then((response) => {
