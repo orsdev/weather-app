@@ -1,15 +1,15 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-const weatherReport = require('./utils/weatherReport');
+const weatherReport = require('./src/utils/weatherReport');
 
 
 const app = express();
 
 //Define paths for express config
-const publicPath = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../templates/views');
-const partialsPath = path.join(__dirname, '../templates/partials');
+const publicPath = path.join(__dirname, './public');
+const viewsPath = path.join(__dirname, './templates/views');
+const partialsPath = path.join(__dirname, './templates/partials');
 
 //Setup handlebars engine and view location
 app.set('views', viewsPath);
