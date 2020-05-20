@@ -89,9 +89,12 @@ footer p {
   letter-spacing: 0.8px;
 }
 
+.weather {
+  flex: 1;
+}
+
 .weather-data {
   width: 100%;
-  flex: 1;
   margin-top: 20px;
 }
 
@@ -128,7 +131,7 @@ footer p {
   font-size: 1.2rem;
 }
 
-.weather-data h5 {
+.weather h5 {
   position: relative;
   text-align: center;
   font-size: 1.7rem;
@@ -138,7 +141,7 @@ footer p {
   height: 35px;
 }
 
-.weather-data h5::before {
+.weather h5::before {
   content: "";
   height: 3px;
   width: 100px;
@@ -152,6 +155,27 @@ footer p {
   -moz-transition: translate(0, -50%);
   -ms-transition: translate(0, -50%);
   -o-transition: translate(0, -50%);
+}
+
+.noMatch {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.noMatch h1 {
+  margin-bottom: 10px;
+}
+
+.noMatch p {
+  font-size: 1.1rem;
+}
+
+.noMatch p a {
+  font-size: 1.1rem;
 }
 
 @media (max-width: 440px) {
