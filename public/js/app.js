@@ -11,7 +11,7 @@ const getWeatherData = (e) => {
 
  if (input.value) {
 
-  fetch('http://localhost:3000/weather?location=' + input.value)
+  fetch('/weather?location=' + input.value)
    .then(function (response) {
     return response.json();
    })

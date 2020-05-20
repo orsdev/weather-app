@@ -5,6 +5,7 @@ const weatherReport = require('./src/utils/weatherReport');
 
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define paths for express config
 const publicPath = path.join(__dirname, './public');
@@ -62,6 +63,6 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
  console.log('server is running on port 3000');
 });
